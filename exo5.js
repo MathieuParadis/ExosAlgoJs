@@ -10,9 +10,9 @@
 
 const compareSum5 = (array, k) => {
 
-  array = array.sort();
+  let arr  = array.sort((a, b) => a - b);
   let i = 0;
-  let j = array.length - 1;
+  let j = arr.length - 1;
     
   while(i < array.length && j >= 0) {
     if (array[i] + array[j] == k) {
@@ -22,14 +22,15 @@ const compareSum5 = (array, k) => {
     } else {
       i++;
     }
+
+
   }
   return false  
 }
 
-const list = [10, 15, 3, 7];
+const list = [10, 15, 3, 7]; 
 const k = 17;
 const l = 19;
 
 console.log(compareSum5(list, k));
 console.log(compareSum5(list, l));
-
